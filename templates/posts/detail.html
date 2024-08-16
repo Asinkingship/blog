@@ -8,4 +8,11 @@
 <h3>{{ post.subtitle }}</h3>
 <small>{{ post.author }}  |  On: {{ post.created_on }}</small>
 <p>{{ post.body }}</p>
+
+{% if user.is_authenticated %}
+{% if user == post.author %}
+<a class="btn btn-danger" href="{% url 'delete' post.id %}">Delete</a>
+{% endif %}
+{% endif %}
+
 {% endblock content %}
