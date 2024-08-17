@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import HomePageView, AboutPageView, PostPageView
+from .views import HomePageView, AboutPageView
 
 
 
