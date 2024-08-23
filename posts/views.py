@@ -49,7 +49,7 @@ class ArchivedPostListView(LoginRequiredMixin, ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        arch_status = Status.objects.get(name="archived")
+        arch_status = Status.objects.get(name="archives")
         context["post_list"] = (
             Post.objects
             .filter(status=arch_status)

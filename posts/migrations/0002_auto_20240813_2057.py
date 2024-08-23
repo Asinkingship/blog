@@ -6,7 +6,7 @@ def populate_status(apps, schemeditor):
     entries = {
         "published": "A post available for all to view",
         "draft": "A post only visable to the author",
-        "archives": "An older post, visible to logged in users"
+        "archived": "An older post, visible to logged in users"
     }
     Status = apps.get_model("posts", "Status")
     for key, value in entries.items():
